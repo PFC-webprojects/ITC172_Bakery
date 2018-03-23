@@ -1,0 +1,80 @@
+﻿@model Bakery02.Models.SaleDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SaleDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDetailPriceCharged)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDetailPriceCharged)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDetailQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDetailQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDetailDiscount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDetailDiscount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDetailSaleTaxPercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDetailSaleTaxPercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDetailEatInTax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDetailEatInTax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sale.SaleKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sale.SaleKey)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

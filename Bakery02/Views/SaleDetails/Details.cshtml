@@ -1,0 +1,74 @@
+﻿@model Bakery02.Models.SaleDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SaleDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDetailPriceCharged)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDetailPriceCharged)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDetailQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDetailQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDetailDiscount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDetailDiscount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDetailSaleTaxPercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDetailSaleTaxPercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDetailEatInTax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDetailEatInTax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sale.SaleKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sale.SaleKey)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SaleDetailKey }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
